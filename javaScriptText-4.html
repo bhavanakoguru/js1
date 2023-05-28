@@ -1,0 +1,48 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<div class="main">
+					
+			<input type="text" placeholder=" Name" class="same name" /><br>
+			
+			<input type="text" placeholder="User Name" class="same userName" /><br>
+			
+			<input type="email" placeholder="email" class="same email" /><br>
+			
+			<input type="Number" placeholder="mobile Number" class="same mnum" /><br>
+			
+			<button class="button">Submit</button>
+		</div>
+		<div class="store">
+			
+		</div>
+	</body>
+	<script>
+		let array=[];
+		let btn=document.querySelector(".button");
+		btn.onclick=function()
+		{
+			let name=document.querySelector(".name").value;
+			let userName=document.querySelector(".userName").value;
+			let email=document.querySelector(".email").value;
+			let number=document.querySelector(".mnum").value;
+			
+			
+			let obj=
+			{
+				Name:name,
+				User:userName,
+				Email:email,
+				Number:number
+			}
+			
+			array.push(obj);
+			
+			
+			localStorage.setItem("detailstore",JSON.stringify(array));
+			window.location.href="javaScriptdata.html";
+		}
+	</script>
+</html>
