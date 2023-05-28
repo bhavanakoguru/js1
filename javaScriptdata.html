@@ -1,0 +1,37 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		
+		<div class="store">
+			
+		</div>
+	</body>
+	<script>
+		let results=JSON.parse(localStorage.getItem("detailstore"));
+		console.log(results);
+		let main=document.querySelector(".store");
+		
+		let store=document.createElement("div");
+		let nameTag=document.createElement("div");
+		nameTag.innerText=" Book Name : "+results.Name;
+		
+		let usertag=document.createElement("div");
+		nameTag.innerText=" Book Name : "+results.User;
+		
+		let emailTag=document.createElement("div");
+		nameTag.innerText=" Book Name : "+results.Email;
+		
+		let number=document.createElement("div");
+		nameTag.innerText=" Book Name : "+results.Number;
+		
+		store.append(nametag,usertag,emailTag,number);
+		main.append(store);
+		
+		for(let i=0;i<results.length;i++)
+		{
+			console.log(results[i].Name);
+		}
+	</script>
+</html>
